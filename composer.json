@@ -1,0 +1,27 @@
+{
+    "name": "erik/dashboard",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Admin\\": "admin/",
+            "Entity\\": "entity/",
+            "Core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "erik"
+        }
+    ],
+    
+    "require": {
+        "slim/slim": "^4.11",
+        "php-di/php-di": "^6.4",
+        "slim/psr7": "^1.6",
+        "slim/php-view": "^3.2",
+        "doctrine/orm": "^2.11.0",
+        "doctrine/dbal": "^3.5",
+        "symfony/yaml": "^5.4",
+        "symfony/cache": "^5.4"
+    }
+}
