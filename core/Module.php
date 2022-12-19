@@ -18,8 +18,7 @@ class Module
         foreach ($folders as $ff) {
             $this->load($dir.'/'.$ff);
         }
-        echo '<pre>';
-        print_r($this->modules);
+     
     }
 
     public function load($path)
