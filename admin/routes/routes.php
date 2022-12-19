@@ -1,6 +1,6 @@
 <?php 
 
-use Admin\Controllers\DashboardController;
+use Admin\Modules\Dashboard\Controller\DashboardController;
 
 require __DIR__.'/../../vendor/autoload.php';
 

@@ -35,13 +35,6 @@ return function (Container $container) {
         return $view;
     });
 
-    $container->set('test', function () {
-        return [
-            'id' => 1,
-            'name' => 'test'
-        ];
-    });
-
     $container->set('session', function () {
         $session = new Core\Session();
         return $session;

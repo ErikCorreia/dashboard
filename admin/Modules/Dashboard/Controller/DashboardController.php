@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin\Controllers;
+namespace Admin\Modules\Dashboard\Controller;
 
 use Core\Controllers\AdminController;
 

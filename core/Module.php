@@ -11,13 +11,15 @@ class Module
     public function __construct()
     {
         // (A) GET FILES/FOLDERS
-        $dir = __DIR__.'/../admin/modules';
+        $dir = __DIR__.'/../admin/Modules';
         $folders = array_diff(scandir($dir), [".", ".."]);
         
         // (B) LOOP THROUGH folders
         foreach ($folders as $ff) {
             $this->load($dir.'/'.$ff);
         }
+        echo '<pre>';
+        print_r($this->modules);
     }
 
     public function load($path)
@@ -37,8 +39,6 @@ class Module
 
             array_push($this->modules, $newArr);
 
-        }else{
-            echo 'No module.xml found in '.$path;
         }
     }
 
