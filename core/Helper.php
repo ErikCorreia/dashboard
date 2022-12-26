@@ -12,4 +12,8 @@ class Helper
     {
         return $_SERVER['DOCUMENT_ROOT'];
     }
+    static function getRequestUri()
+    {
+        return $_SERVER['REQUEST_URI'];
+    }
 }

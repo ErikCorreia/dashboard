@@ -10,4 +10,5 @@
     <link rel="stylesheet" href="/admin//resources/assets/css/main.css">
     <title>Dashboard</title>
 </head>
-<body>
+<body class="<?php if(Core\Helper::getRequestUri() == '/admin/login'){ echo 'ms-0';} ?>">
+    

@@ -1,10 +1,8 @@
-<main id="page">
+<main style="position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 70%;" id="page">
     <div class="container">
-        <div class="page-title bg-light rounded shadow-sm px-4 py-2">
-            <h1 class="m-0"><?= $title ?></h1>
-        </div>
-        <div class="row mt-4">
-            <div class="col-6 mx-auto">
+        <div class="row">
+            <div class="col-6 mx-auto bg-white shadow p-4 rounded">
+                <h1 class="text-center mb-4">Login</h1>
                 <form action="" method="POST" class="form-login">
                     <div class="form-group mb-4">
                         <div class="form-floating mb-3">
@@ -19,7 +17,9 @@
                     <?php if ($status){ ?>
                         <p style="color: red"><?= $status ?></p>
                     <?php } ?>
-                    <button type="submit" class="btn btn-success text-uppercase px-4 py-2">Entrar</button>
+                    <div class="d-flex">
+                        <button type="submit" class="mx-auto w-100 btn btn-primary text-uppercase px-4 py-2">Entrar</button>
+                    </div>
                 </form>
             </div>
         </div>
