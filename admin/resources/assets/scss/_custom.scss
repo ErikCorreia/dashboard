@@ -1,0 +1,12 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$body-bg: #f4f4f4;
+$body-color: #111;
+
+$primary: red;
+

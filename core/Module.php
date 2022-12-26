@@ -37,7 +37,6 @@ class Module
             $newArr = json_decode($con, true);
 
             array_push($this->modules, $newArr);
-
         }
     }
 
@@ -50,5 +49,9 @@ class Module
     public function setModule($key, $module)
     {
         $this->modules[$key] = $module;
+    }
+    public function getModules()
+    {
+        return $this->modules;
     }
 }

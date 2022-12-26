@@ -27,7 +27,7 @@ class Session
 
     public function has($key)
     {
-        return $_SESSION[$key] ? true : false;
+        return isset($_SESSION[$key]) ? true : false;
     }
 
     public function destroy()

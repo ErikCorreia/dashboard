@@ -12,6 +12,6 @@ class BaseController
         $this->container = $container;
         $this->view = $container->get('view');
         $this->em = $container->get('entityManager');
-        $this->module = $container->get('modules');
+        $this->modules = $container->get('modules')->getModules();
     }
 } 

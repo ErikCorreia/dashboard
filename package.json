@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev-site": "sass --watch app/resources/scss/main.scss:app/resources/css/main.scss",
-    "dev-admin": "sass --watch admin/resources/scss/main.scss:admin/resources/css/main.scss"
+    "dev-site": "sass --watch app/resources/assets/scss/main.scss:app/resources/assets/css/main.css",
+    "dev-admin": "sass --watch admin/resources/assets/scss/main.scss:admin/resources/assets/css/main.css"
   },
 
   "dependencies": {
