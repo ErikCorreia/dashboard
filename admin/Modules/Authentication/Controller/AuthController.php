@@ -30,7 +30,7 @@ class AuthController extends AdminController
                 throw new \Exception('Invalid password');
             };
 
-            $this->container->get('session')->set('user', $user);
+            $this->getSession()->set('user', $user->getId());
 
             return $response->withHeader('Location', '/admin')->withStatus(302);
 

@@ -1,5 +1,6 @@
 <root>
-    <name>About</name>
+    <name>Sobre</name>
     <description>This is the about page module</description>
     <url>/about</url>
+    <slug>about</slug>
 </root>

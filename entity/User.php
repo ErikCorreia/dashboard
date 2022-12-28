@@ -3,6 +3,7 @@
 namespace Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 #[ORM\Entity]
 #[ORM\Table(name: 'users')]
@@ -24,6 +25,17 @@ class User
 
     #[ORM\Column(type:'string')]
     protected $roles;
+
+    #[ORM\JoinTable(name: 'user_modules')]
+    #[ORM\JoinColumn(name: 'user_id', referencedColumnName: 'id')]
+    #[ORM\InverseJoinColumn(name: 'module_id', referencedColumnName: 'id')]
+    #[ORM\ManyToMany(targetEntity: UserModule::class)]
+    protected $modules;
+
+    public function __construct()
+    {
+        $this->modules = new ArrayCollection();
+    }
 
     public function getId()
     {
@@ -69,6 +81,34 @@ class User
     public function setRole($roles)
     {
         $this->roles = $roles;
+        return $this;
+    }
+    public function getModules()
+    {
+        return $this->modules;
+    }
+
+    public function addModule(UserModule $module)
+    {
+        $this->modules[] = $module;
+        return $this;
+    }
+    public function removeModule(UserModule $module)
+    {
+        $this->modules->removeElement($module);
+        return $this;
+    }
+    public function hasModule(UserModule $module)
+    {
+        return $this->modules->contains($module);
+    }
+    public function getModule(UserModule $module)
+    {
+        return $this->modules->toArray($module);
+    }
+    public function setModule(UserModule $module)
+    {
+        $this->modules[] = $module;
         return $this;
     }
 }

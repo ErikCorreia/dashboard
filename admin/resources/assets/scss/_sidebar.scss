@@ -12,12 +12,20 @@
 
         .nav-link {
             padding: 10px 15px;
-
+            svg{
+                fill: rgb(88, 87, 87);
+                transition: .3s;
+                width: 20px;
+                height: 20px;
+            }
             &:hover,
             &.active {
                 display: block;
                 background-color: $primary;
                 color: #fff;
+                svg{
+                    fill: #fff;
+                }
             }
         }
     }

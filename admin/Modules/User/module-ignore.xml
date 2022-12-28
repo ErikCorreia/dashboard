@@ -2,4 +2,5 @@
     <name>Usuários</name>
     <description>This is the users page module</description>
     <url>/users</url>
+    <slug>users</slug>
 </root>

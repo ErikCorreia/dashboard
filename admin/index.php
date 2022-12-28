@@ -11,6 +11,7 @@ $container = require __DIR__.'/../config/container.php';
 $container($c);
 
 $app = AppFactory::createFromContainer($c);
+$app->addBodyParsingMiddleware();
 
 $app->setBasePath('/admin');
 

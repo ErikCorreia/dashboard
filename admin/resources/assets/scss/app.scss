@@ -3,3 +3,27 @@ body{
         margin-left: 310px;
     }
 }
+
+.toast.show{
+    &.success{
+        opacity: 0;
+        animation: 5s fade-out linear;
+        background-color: $success;
+    }
+    &.error{
+        opacity: 1;
+        background-color: $danger;
+    }
+}
+
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

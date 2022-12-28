@@ -16679,10 +16679,19 @@ progress {
 .sidebar .navbar .nav-link {
   padding: 10px 15px;
 }
+.sidebar .navbar .nav-link svg {
+  fill: rgb(88, 87, 87);
+  transition: 0.3s;
+  width: 20px;
+  height: 20px;
+}
 .sidebar .navbar .nav-link:hover, .sidebar .navbar .nav-link.active {
   display: block;
   background-color: rgb(39, 105, 228);
   color: #fff;
+}
+.sidebar .navbar .nav-link:hover svg, .sidebar .navbar .nav-link.active svg {
+  fill: #fff;
 }
 
 @media (min-width: 768px) {
@@ -16696,6 +16705,28 @@ progress {
 @media (min-width: 768px) {
   body {
     margin-left: 310px;
+  }
+}
+
+.toast.show.success {
+  opacity: 0;
+  animation: 5s fade-out linear;
+  background-color: #198754;
+}
+.toast.show.error {
+  opacity: 1;
+  background-color: #dc3545;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
