@@ -16666,15 +16666,42 @@ progress {
 }
 .sidebar {
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #fff;
+  bottom: 10px;
+  left: 5%;
+  right: 5%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+.sidebar .sidebar-header {
+  display: none;
 }
 .sidebar .navbar {
   display: block;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .sidebar .navbar .navbar-nav:not(.accordion-collapse) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .sidebar .navbar .navbar-nav:not(.accordion-collapse) .nav-item {
+    display: inline-block;
+  }
+  .sidebar .navbar .navbar-nav:not(.accordion-collapse) span {
+    display: none;
+  }
+  .sidebar .navbar .dropdown {
+    position: relative;
+  }
+  .sidebar .navbar .dropdown-menu {
+    position: absolute;
+    top: -80px;
+  }
 }
 .sidebar .navbar .nav-link {
   padding: 10px 15px;
@@ -16693,6 +16720,15 @@ progress {
 .sidebar .navbar .nav-link:hover svg, .sidebar .navbar .nav-link.active svg {
   fill: #fff;
 }
+.sidebar .dropdown .toggle-arrow {
+  transition: 0.3s;
+}
+.sidebar .dropdown [aria-expanded=true] .toggle-arrow {
+  transform: rotate(90deg);
+}
+.sidebar .dropdown [aria-expanded=false] .toggle-arrow {
+  transform: rotate(0);
+}
 
 @media (min-width: 768px) {
   .sidebar {
@@ -16701,10 +16737,44 @@ progress {
     height: 100%;
     width: 310px;
   }
+  .sidebar .sidebar-header {
+    display: initial;
+  }
+}
+.toggle-menu {
+  cursor: pointer;
+}
+
+body #page {
+  padding-bottom: 55px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   body {
     margin-left: 310px;
+  }
+  body #page {
+    padding-bottom: 0px;
+  }
+}
+
+.access-card {
+  border-radius: 15px;
+  border-left: 5px solid rgb(39, 105, 228);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.toast {
+  position: fixed;
+  bottom: 100px;
+  right: 10%;
+  left: 10%;
+}
+@media (min-width: 767px) {
+  .toast {
+    bottom: 20px;
+    right: 50%;
+    left: 10%;
   }
 }
 

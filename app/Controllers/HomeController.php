@@ -14,7 +14,6 @@ class HomeController extends AppController
         return $this->view->render($response, 'views/home/home.php', [
             'user' => $user,
             'title' => 'Home Page',
-            'description' => 'This is the home page',
         ]);
     }
 }
