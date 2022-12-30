@@ -42,12 +42,12 @@
           <a href="" class="nav-link bold text-uppercase position-absolute" style="right: 30px; top: 50%; transform: translateY(-50%)">mais</a>
         </div>
         <div class="row mt-3">
-            <div class="col-lg-8 p-3">
+            <div class="col-lg-8">
                 <div class="bg-white shadow rounded">
                     <div id="chart-a"></div>
                 </div>
             </div>
-            <div class="col-lg-4 p-3">
+            <div class="col-lg-4">
                 <div class="bg-white shadow rounded">
                     <div id="chart-b"></div>
                 </div>
