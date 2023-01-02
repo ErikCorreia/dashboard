@@ -4,6 +4,11 @@ namespace Core;
 
 use SimpleXMLIterator;
 
+// ||==================================================||
+// ||   Mapeia os modulos definidos em /admin/modules  ||
+// ||--------------------------------------------------||
+// ||                                                  ||
+// ||==================================================||
 class Module
 {
     protected $modules = [];

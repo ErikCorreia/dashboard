@@ -9,7 +9,7 @@
                 <div class="access-card bg-white p-4">
                     <div class="card-header">
                       <span class="h4 m-0">1565</span>
-                      <span class="bold text-secondary ms-3">Views</span>
+                      <span class="bold text-secondary ms-3">Total de Views</span>
                     </div>
                 </div>
             </div>

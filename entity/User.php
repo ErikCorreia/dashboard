@@ -2,12 +2,14 @@
 
 namespace Entity;
 
+use Core\DB\Super\SuperEntity;
+
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 #[ORM\Entity]
 #[ORM\Table(name: 'users')]
-class User
+class User extends SuperEntity
 {
     #[ORM\Id]
     #[ORM\Column(type: 'integer')]

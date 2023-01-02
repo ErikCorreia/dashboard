@@ -8,6 +8,7 @@
                 <div class="col my-auto ps-3">
                     <!-- <div><?php // echo $current_user->getUsername() ?></div> -->
                     <a class="nav-link" href="/"><h3>Dashboard</h3></a>
+                    <a href="/admin/logout">sair</a>
                 </div>
             </div>
         </div>

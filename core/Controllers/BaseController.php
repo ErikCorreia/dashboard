@@ -12,6 +12,10 @@ class BaseController
         $this->view = $container->get('view');
         $this->em = $container->get('entityManager');
         $this->modules = $container->get('modules')->getModules();
+
+        $config = $this->em->getRepository(\Entity\Config::class)->find(1) ?? '';
+
+        $this->view->addAttribute('config', $config);
     }
 
     public function getContainerProperty($property)

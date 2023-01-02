@@ -7,8 +7,9 @@ use Slim\Factory\AppFactory;
 
 require 'vendor/autoload.php';
 
-$c = new Container();
+require 'config/init.php';
 
+$c = new Container();
 $container = require 'config/container.php';
 $container($c);
 
@@ -25,4 +26,5 @@ require 'app/routes/routes.php';
 
 // Run app
 $app->run();
+
 

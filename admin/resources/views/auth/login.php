@@ -1,7 +1,7 @@
 <main style="position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 70%;" id="page">
     <div class="container">
         <div class="row">
-            <div class="col-6 mx-auto bg-white shadow p-4 rounded">
+            <div class="col-lg-6 mx-auto bg-white shadow p-4 rounded">
                 <h1 class="text-center mb-4">Login</h1>
                 <form action="" method="POST" class="form-login">
                     <div class="form-group mb-4">
@@ -19,6 +19,14 @@
                     <?php } ?>
                     <div class="d-flex">
                         <button type="submit" class="mx-auto w-100 btn btn-primary text-uppercase px-4 py-2">Entrar</button>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col text-center">
+                            <a href="/admin/register">Registrar-se</a>
+                        </div>
+                        <div class="col text-center">
+                            <a href="/admin/recover-pass">Recuperar senha</a>
+                        </div>
                     </div>
                 </form>
             </div>

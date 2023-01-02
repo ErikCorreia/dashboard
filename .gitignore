@@ -1,2 +1,5 @@
+/.idea
 /vendor
 /node_modules
+/config/environment/prod.env
+/config/environment/dev.env

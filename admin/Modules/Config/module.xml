@@ -1,0 +1,5 @@
+<root>
+    <name>Config</name>
+    <description>This is the site config page module</description>
+    <slug>config</slug>
+</root>

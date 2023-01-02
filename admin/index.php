@@ -5,6 +5,8 @@ use Slim\Factory\AppFactory;
 
 require __DIR__.'/../vendor/autoload.php';
 
+require __DIR__.'/../config/init.php';
+
 $c = new Container();
 
 $container = require __DIR__.'/../config/container.php';

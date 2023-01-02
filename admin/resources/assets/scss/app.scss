@@ -20,14 +20,14 @@ body{
 .toast{
     position: fixed;
     bottom: 100px;
-    right: 10%;
-    left: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 
-    @media(min-width: 767px){
-        bottom: 20px;
-        right: 50%;
-        left: 10%;
-    }
+    // @media(min-width: 767px){
+    //     bottom: 20px;
+    //     right: 50%;
+    //     left: 10%;
+    // }
 }
 .toast.show{
     &.success{

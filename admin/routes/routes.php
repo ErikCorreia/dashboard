@@ -8,11 +8,15 @@ use Admin\Modules\User\Controller\UserController;
 use Admin\Modules\ModulesManager\Controller\ModulesManagerController;
 use Admin\Modules\Authentication\Controller\AuthController;
 use Admin\Modules\Projects\Controller\ProjectController;
+use Admin\Modules\Config\Controller\ConfigController;
 
 
 require __DIR__.'/../../vendor/autoload.php';
 
 $app->get('/', [DashboardController::class, 'index'])->setName('dashboard')->add(AuthMiddleware::class);
+
+$app->get('/config', ConfigController::class)->add(AuthMiddleware::class);
+$app->post('/config', [ConfigController::class, 'postInsert'])->add(AuthMiddleware::class);
 
 $app->get('/about', [AboutController::class, 'index'])->setName('about')->add(AuthMiddleware::class);
 
