@@ -1,3 +1,6 @@
+@use 'sass:map';
+
+@import 'reset';
 
 @import 'custom.scss';
 
@@ -26,4 +29,17 @@
 
 // 8. Add additional custom code here
 
-@import 'app.scss';
+// variables
+@import 'variables.scss';
+@import'animations/animations';
+
+// Utilities
+@import './mixins/mixins.scss';
+@import './utilities/utils.scss';
+
+// my components
+@import './components/components';
+
+// pages styles
+@import 'grid';
+@import 'app';

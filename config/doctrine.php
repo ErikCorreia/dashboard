@@ -24,5 +24,16 @@ $conn = array(
     'charset'  => $_ENV['CHARSET'],
 );
 
+
+// $conn = array(
+//     'driver'   => 'pdo_mysql',
+//     'host'     => '127.0.0.1',
+//     'user'     => 'root',
+//     'password' => '',
+//     'dbname'   => 'dashboard',
+//     'port'     => '3306',
+//     'charset'  => 'utf8',
+// );
+
 // obtaining the entity manager
 $entityManager = EntityManager::create($conn, $config);

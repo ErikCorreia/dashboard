@@ -1,0 +1,25 @@
+@import '../variables';
+
+@each $key, $color in $theme-colors {
+    .btn-#{$key} {
+        background-color: $color;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding-left: $default-pedding-left ;
+    padding-right: $default-pedding-right ;
+    padding-top: $default-pedding-top ;
+    padding-bottom: $default-pedding-bottom ;
+    text-decoration: none;
+    border-radius: 10px;
+    &:hover {
+        outline: 2px solid $border-color;
+    }
+}
+
+.outline {
+    background-color: transparent;
+    border: 1px solid $border-color;
+}

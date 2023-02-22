@@ -1,0 +1,39 @@
+.action-bar {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    
+    .btn {
+        border: 1px solid rgba(255, 255, 255, .5);
+        position: relative;
+        color: #fff;
+        overflow: hidden;
+        font-weight: 600;
+        padding: 15px 50px;
+        &.disabled {
+            opacity: .2;
+        }
+    
+        &:before{
+            position: absolute;
+            top: -50px;
+            left: -100%;
+            width: 30px;
+            height: calc(100% + 100px);
+            transform: rotate(-45deg);
+            background: radial-gradient(rgba(255, 255, 255, .5), transparent);
+            content: "";
+            transition: .5s ease-in-out;
+        }
+        &:hover {
+            color: $primary;
+            &:before {
+                left: 130%;
+            }
+            outline: 1px solid rgba(255, 255, 255, .5);
+        }
+    }
+}
+

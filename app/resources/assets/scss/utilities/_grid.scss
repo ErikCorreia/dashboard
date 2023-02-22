@@ -1,0 +1,16 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 15px;
+}
+
+// gerar classes de colunas automaticamente de 1 a 12
+.col {
+    grid-area: 1 / span 12;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        grid-area: 1 / span $i;
+    }
+}

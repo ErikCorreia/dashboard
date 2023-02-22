@@ -1,0 +1,10 @@
+@use 'sass:map';
+@import '../variables.scss';
+
+@mixin text-color($color){
+    @if $color == light {
+        color: $light;
+    } @else {
+        color: $black;
+    }
+}

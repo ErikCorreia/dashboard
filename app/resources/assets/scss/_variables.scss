@@ -1,0 +1,29 @@
+// colors
+$black: #020202;
+$light: #DEE5E5;
+$primary: #00916E;
+$secondary: #25A18E;
+$success: #1bd386;
+$warning: #ffd900;
+$info: #0075F2;
+$danger: crimson;
+
+// theme colors
+$theme-colors: (
+    "black": $black,
+    "light": $light,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "info": $info,
+    "danger":$danger,
+);
+
+// spasing
+$default-pedding-right: 15px;
+$default-pedding-left: 15px;
+$default-pedding-top: 8px;
+$default-pedding-bottom: 8px;
+
+$border-color: rgba(255,255,255,.1)

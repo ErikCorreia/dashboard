@@ -1,0 +1,56 @@
+.door-area {
+  display: flex;
+  justify-content: end;
+}
+
+.doorframe {
+  display: flex;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  width: 200px;
+  border: 2px solid $primary;
+  transform: scale3d(15px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  transition: 5s ease-in;
+  position: relative;
+
+  .someone {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, .5), transparent);
+  }
+}
+
+.door {
+  flex-grow: 1;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+  position: relative;
+  background-color: $primary;
+}
+
+.door:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  background-color: $primary;
+}
+
+.doorframe:focus .door,
+.doorframe:hover .door,
+.doorframe.active .door {
+  /* 8 */
+  transform: rotate3d(0, 1, 0, -130deg);
+}
